@@ -15,7 +15,7 @@ export const EmotionCard = (): React.JSX.Element => {
             src="/Icon/emotion-icon.svg"
           />
         </div>
-  <p className="font-normal text-[#2c2c2c] text-sm lg:text-base tracking-[0] leading-[normal]">
+        <p className="font-normal text-[#2c2c2c] text-sm lg:text-base tracking-[0] leading-[normal]">
           Creating meaningful and emotionally resonant experiences that connect
           deeply with audiences, building trust, loyalty, and lasting
           relationships.

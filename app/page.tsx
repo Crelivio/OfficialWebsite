@@ -6,6 +6,7 @@ import { StrategyCard } from "./Card/Strategy";
 import { TechnologyCard } from "./Card/Technology";
 import { DesignCard } from "./Card/Design";
 import { EmotionCard } from "./Card/Emotion";
+import { CoreValueSection } from "./Section/CoreValueSection";
 
 const HomePage = () => {
   return (
@@ -67,28 +68,31 @@ const HomePage = () => {
               </div>
 
               {/* Strategy Card - Top Left */}
-              <div className="absolute -top-30 right-200">
+              <div className="absolute top-[40px] left-[20px] lg:top-[40px] lg:left-[60px] xl:top-[20px] xl:left-[120px]">
                 <StrategyCard />
               </div>
 
               {/* Technology Card - Top Right */}
-              <div className="absolute -top-30 left-200">
+              <div className="absolute top-[40px] right-[20px] lg:top-[20px] lg:right-[60px] xl:top-[5px] xl:right-[120px]">
                 <TechnologyCard />
               </div>
-
               {/* Design Card - Bottom Left */}
-              <div className="absolute bottom-[20px] lg:bottom-[40px] left-[20px] lg:left-[60px] xl:left-[100px]">
+              <div className="absolute bottom-[20px] lg:bottom-[40px] left-[20px] lg:left-[60px] xl:left-[120px]">
                 <DesignCard />
               </div>
 
               {/* Emotion Card - Bottom Right */}
-              <div className="absolute bottom-[20px] lg:bottom-[40px] right-[20px] lg:right-[60px] xl:right-[100px]">
+              <div className="absolute bottom-[20px] lg:bottom-[5px] right-[20px] lg:right-[60px] xl:right-[120px]">
                 <EmotionCard />
               </div>
             </div>
           </div>
         </section>
       </main>
+      {/* Core Values Section */}
+      <div>
+        <CoreValueSection />
+      </div>
     </div>
   );
 };
