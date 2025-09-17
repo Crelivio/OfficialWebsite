@@ -1,50 +1,91 @@
 import React from "react";
 import BrandingSection from "@/app/Section/BrandingSection";
 import { Button } from "@/components/ui/button";
+import { SubTitle } from "./Section/Sub-tiltle";
+import { StrategyCard } from "./Card/Strategy";
+import { TechnologyCard } from "./Card/Technology";
+import { DesignCard } from "./Card/Design";
+import { EmotionCard } from "./Card/Emotion";
 
 const HomePage = () => {
   return (
-    <div className="bg-[#ffffff] w-full min-h-screen">
+    <div className="w-full min-h-screen bg-neutral-900">
       {/* header and navigation */}
-      <section>
-        <BrandingSection />
-
-        {/* Navigation */}
-
-        <div className="flex w-[1223px] items-center justify-between absolute top-12 left-[105px]">
+      <header className="relative z-50">
+        {/* navbar/ Navigation */}
+        <div className="flex w-full max-w-7xl mx-auto items-center justify-between py-3 px-6">
           <div className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]">
             <img
-              className="relative w-[70px] h-[65px]"
+              className="relative w-[45px] h-[40px] lg:w-[50px] lg:h-[45px]"
               alt="Vector"
               src="/Icon/logo.svg"
             />
-            <div className="relative w-fit [font-family:'Montserrat',Helvetica] font-bold text-[#ffffff] text-[35px] tracking-[0] leading-[normal]">
+            <div className="relative w-fit font-bold text-[#ffffff] text-[24px] lg:text-[28px] tracking-[0] leading-[normal]">
               Crelivio
             </div>
           </div>
-            <div className="inline-flex items-center justify-center gap-16 relative flex-[0_0_auto]">
-            <div className="inline-flex items-start gap-[45px] relative flex-[0_0_auto] border border-solid border-black">
-              <div className="relative w-fit mt-[-1.00px] [font-family:'Montserrat',Helvetica] font-semibold text-[#ffffff] text-[27px] tracking-[0] leading-[normal]">
+          <div className="inline-flex items-center justify-center gap-8 lg:gap-12 relative flex-[0_0_auto]">
+            <div className="inline-flex items-start gap-[25px] lg:gap-[35px] relative flex-[0_0_auto]">
+              <div className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal]">
                 ABOUT
               </div>
-              <div className="relative w-fit mt-[-1.00px] [font-family:'Montserrat',Helvetica] font-semibold text-[#ffffff] text-2xl tracking-[0] leading-[normal]">
+              <div className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal]">
                 FAQ
               </div>
             </div>
             {/* Button Component */}
-            <Button className="flex w-[162px] items-center gap-[8.12px] px-[14.03px] py-[4.43px] relative mt-[-1.50px] mb-[-1.50px] mr-[-1.50px] bg-dark-blue border-[3px] border-solid border-[#83aefa] shadow-[10px_10px_0px_#92cdfe] h-auto">
-              <div className="relative w-fit mt-[-1.50px] [font-family:'Bricolage_Grotesque',Helvetica] font-semibold text-[#ffffff] text-[22px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
+            <Button className="flex w-[140px] lg:w-[150px] items-center gap-[8.12px] px-[12px] py-[4px] relative mt-[-1.50px] mb-[-1.50px] mr-[-1.50px] bg-blue-800 border-[3px] border-solid border-[#83aefa] shadow-[8px_8px_0px_#92cdfe] lg:shadow-[10px_10px_0px_#92cdfe] h-auto">
+              <div className="relative w-fit mt-[-1.50px] font-display font-semibold text-[#ffffff] text-[18px] lg:text-[20px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
                 Contact Us
               </div>
             </Button>
           </div>
         </div>
-      </section>
+      </header>
 
       {/* Main content */}
-      <div className="relative w-full h-full">
+      <main className="relative">
+        <BrandingSection />
+        <SubTitle />
+        {/* Four Pillars Section */}
+        <section className="relative w-full bg-neutral-900 py-12 lg:py-14 xl:py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            {/* Top pillar cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="relative w-full flex justify-center">
+                <StrategyCard />
+              </div>
+              <div className="relative w-full flex justify-center">
+                <TechnologyCard />
+              </div>
+            </div>
 
-      </div>
+            {/* Join line and center text */}
+            <div className="relative flex flex-col items-center justify-center my-6 lg:my-8">
+              <img
+                className="w-[380px] h-[450px] lg:w-[420px] lg:h-[500px] xl:w-[474px] xl:h-[568px] object-contain"
+                alt="line"
+                src="/Icon/join-line.svg"
+              />
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[380px] h-[110px] lg:w-[420px] lg:h-[120px] xl:w-[485px] xl:h-[137px] rounded-[242.5px/68.5px] border-[4px] lg:border-[5px] xl:border-[6px] border-solid border-[#2c2c2c] rotate-[-2.90deg] bg-blue-500 flex items-center justify-center">
+                <div className="rotate-[-1.23deg] font-display font-semibold text-white text-[22px] lg:text-[26px] xl:text-[30px] text-center tracking-[0] leading-[normal]">
+                  Four Pillars of Excellence
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom pillar cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div className="relative w-full flex justify-center">
+                <DesignCard />
+              </div>
+              <div className="relative w-full flex justify-center">
+                <EmotionCard />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };
