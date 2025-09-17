@@ -26,7 +26,7 @@ const visionMissionData = [
 
 export const SubTitle: React.FC = () => {
   return (
-    <section className="w-full px-6 relative pb-10">
+    <section className="w-full px-6 relative pb-50">
       <img
         className="absolute w-[140px] h-[140px] right-[130px] hidden lg:block"
         alt="Decorative group"

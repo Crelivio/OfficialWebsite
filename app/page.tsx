@@ -48,37 +48,41 @@ const HomePage = () => {
         <BrandingSection />
         <SubTitle />
 
-        {/* Join line and center text */}
-        <section className="relative w-full bg-neutral-900 py-12 lg:py-14 xl:py-16">
+        {/* Four Pillars Section with Join Line */}
+        <section className="relative w-full bg-neutral-900 py-12 lg:py-16">
           <div className="max-w-7xl mx-auto px-6">
-            {/* Top pillar cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="relative w-full flex justify-center">
-                <StrategyCard />
-              </div>
-              <div className="relative w-full flex justify-center">
-                <TechnologyCard />
-              </div>
-            </div>
-            <div className="relative flex flex-col items-center justify-center my-6 lg:my-8">
-              <img
-                className="w-[380px] h-[450px] lg:w-[420px] lg:h-[500px] xl:w-[474px] xl:h-[568px] object-contain"
-                alt="line"
-                src="/Icon/join-line.svg"
-              />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[380px] h-[110px] lg:w-[420px] lg:h-[120px] xl:w-[485px] xl:h-[137px] rounded-[242.5px/68.5px] border-[4px] lg:border-[5px] xl:border-[6px] border-solid border-[#2c2c2c] rotate-[-2.90deg] bg-blue-500 flex items-center justify-center">
-                <div className="rotate-[-1.23deg] font-display font-semibold text-white text-[22px] lg:text-[26px] xl:text-[30px] text-center tracking-[0] leading-[normal]">
-                  Four Pillars of Excellence
+            <div className="relative flex justify-center items-center min-h-[600px] lg:min-h-[700px]">
+              {/* Central join line and text */}
+              <div className="relative flex flex-col items-center justify-center">
+                <img
+                  className="w-[380px] h-[450px] lg:w-[420px] lg:h-[500px] xl:w-[474px] xl:h-[568px] object-contain"
+                  alt="line"
+                  src="/Icon/join-line.svg"
+                />
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[380px] h-[110px] lg:w-[420px] lg:h-[120px] xl:w-[485px] xl:h-[137px] rounded-[242.5px/68.5px] border-[4px] lg:border-[5px] xl:border-[6px] border-solid border-[#2c2c2c] rotate-[-2.90deg] bg-blue-500 flex items-center justify-center">
+                  <div className="rotate-[-1.23deg] font-display font-semibold text-white text-[22px] lg:text-[26px] xl:text-[30px] text-center tracking-[0] leading-[normal]">
+                    Four Pillars of Excellence
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom pillar cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-              <div className="relative w-full flex justify-center">
+              {/* Strategy Card - Top Left */}
+              <div className="absolute -top-30 right-200">
+                <StrategyCard />
+              </div>
+
+              {/* Technology Card - Top Right */}
+              <div className="absolute -top-30 left-200">
+                <TechnologyCard />
+              </div>
+
+              {/* Design Card - Bottom Left */}
+              <div className="absolute bottom-[20px] lg:bottom-[40px] left-[20px] lg:left-[60px] xl:left-[100px]">
                 <DesignCard />
               </div>
-              <div className="relative w-full flex justify-center">
+
+              {/* Emotion Card - Bottom Right */}
+              <div className="absolute bottom-[20px] lg:bottom-[40px] right-[20px] lg:right-[60px] xl:right-[100px]">
                 <EmotionCard />
               </div>
             </div>
