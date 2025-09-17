@@ -4,42 +4,57 @@ const BrandingSection = () => {
   const imageCards = [
     {
       bgClasses:
-        "w-[354px] h-[241px] top-[23px] left-[370px] rotate-[-7.85deg]",
-      imgClasses: "w-[374px] h-[252px] top-[30px] left-[406px]",
+        "w-[345px] h-[241px] top-[50px] left-[30px] rotate-[-7.85deg]",
+      imgClasses: "w-[374px] h-[251px] top-[55px] left-[58px]",
       src: "/Image/card1.png",
       alt: "Image",
     },
     {
-      bgClasses: "w-[395px] h-[300px] top-72 left-[505px] rotate-[15.24deg]",
-      imgClasses: "w-[404px] h-[304px] top-64 left-[470px]",
+      bgClasses: "w-[490px] h-[270px] top-[335px] left-[130px] rotate-[15.24deg]",
+      imgClasses: "w-[509px] h-[305px] top-[280px] left-[110px]",
       src: "/Image/card2.png",
       alt: "Image",
     },
     {
       bgClasses:
-        "w-[354px] h-[241px] top-[484px] left-[123px] rotate-[-15.27deg]",
-      imgClasses: "w-[367px] h-[247px] top-[481px] left-[131px]",
+        "w-[344px] h-[231px] top-[500px] left-[-270px] rotate-[-15.27deg]",
+      imgClasses: "w-[366px] h-[246px] top-[510px] left-[-230px]",
       src: "/Image/card3.png",
       alt: "Image",
     },
   ];
 
   return (
-    <section className="w-full h-[995px] bg-neutral-900 relative">
-      <div className="relative w-[1270px] h-[769px] top-[179px] left-[84px]">
-        <h1 className="absolute h-[141px] top-[67px] left-[68px] [font-family:'Bricolage_Grotesque',Helvetica] font-extrabold text-[#ffffff] text-[76px] tracking-[1.00px] leading-[70.4px]">
-          STRATEGIC <br />
-          DESIGN, TECH
-        </h1>
+    <section className="w-full min-h-[800px] lg:min-h-[850px] xl:min-h-[995px] relative overflow-visible pb-8 lg:pb-10">
+      <div className="max-w-7xl mx-auto relative h-full">
+        <div className="grid lg:grid-cols-2 items-center h-full">
+          {/* Left side - Text content */}
+          <div className="flex flex-col space-y-6">
+            <img
+              className="w-[70px] h-[71px] -ml-8"
+              alt="Vector"
+              src="/Icon/bg-vector.svg"
+            />
+            
+            <h1 className="font-display font-extrabold text-[#ffffff] text-[48px] lg:text-[56px] xl:text-[64px] tracking-[1.00px] leading-[44px] lg:leading-[52px] xl:leading-[60px]">
+              STRATEGIC <br />
+              DESIGN, TECH
+            </h1>
 
-        <img
-          className="absolute w-[75px] h-[76px] top-0 left-0"
-          alt="Vector"
-          src="/Icon/bg-vector.svg"
-        />
+            <h2 className="font-display font-extrabold text-[#ffffff] text-[50px] lg:text-[58px] xl:text-[68px] tracking-[2.00px] leading-[46px] lg:leading-[54px] xl:leading-[64px]">
+              EMOTIONAL <br />
+              BRANDING
+            </h2>
 
-        <div className="absolute w-[924px] h-[768px] top-px left-[346px]">
-          <div className="relative h-[768px]">
+            <img
+              className="w-[417px] h-12"
+              alt="Vector"
+              src="/Icon/underline.svg"
+            />
+          </div>
+
+          {/* Right side - Image cards */}
+          <div className="relative h-[500px] lg:h-[550px] xl:h-[600px] top-16 lg:top-20">
             {imageCards.map((card, index) => (
               <React.Fragment key={index}>
                 <div
@@ -54,17 +69,6 @@ const BrandingSection = () => {
             ))}
           </div>
         </div>
-
-        <h2 className="absolute h-[151px] top-[217px] left-[75px] [font-family:'Bricolage_Grotesque',Helvetica] font-extrabold text-[#ffffff] text-[80px] tracking-[2.00px] leading-[75.4px]">
-          EMOTIONAL <br />
-          BRANDING
-        </h2>
-
-        <img
-          className="absolute w-[417px] h-12 top-[380px] left-[75px]"
-          alt="Vector"
-          src="/Icon/underline.svg"
-        />
       </div>
     </section>
   );
