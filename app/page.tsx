@@ -13,14 +13,14 @@ const HomePage = () => {
       {/* header and navigation */}
       <header className="relative z-50">
         {/* navbar/ Navigation */}
-        <div className="flex w-full max-w-7xl mx-auto items-center justify-between py-3 px-6">
+        <div className="flex w-full max-w-7xl mx-auto items-center justify-between py-6 px-20">
           <div className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]">
             <img
-              className="relative w-[45px] h-[40px] lg:w-[50px] lg:h-[45px]"
+              className="relative w-[20px] h-[20px] lg:w-[50px] lg:h-[45px]"
               alt="Vector"
               src="/Icon/logo.svg"
             />
-            <div className="relative w-fit font-bold text-[#ffffff] text-[24px] lg:text-[28px] tracking-[0] leading-[normal]">
+            <div className="relative w-fit font-bold text-[#ffffff] text-[20px] lg:text-[25px] tracking-[0] leading-[normal]">
               Crelivio
             </div>
           </div>
@@ -47,7 +47,8 @@ const HomePage = () => {
       <main className="relative">
         <BrandingSection />
         <SubTitle />
-        {/* Four Pillars Section */}
+
+        {/* Join line and center text */}
         <section className="relative w-full bg-neutral-900 py-12 lg:py-14 xl:py-16">
           <div className="max-w-7xl mx-auto px-6">
             {/* Top pillar cards */}
@@ -59,8 +60,6 @@ const HomePage = () => {
                 <TechnologyCard />
               </div>
             </div>
-
-            {/* Join line and center text */}
             <div className="relative flex flex-col items-center justify-center my-6 lg:my-8">
               <img
                 className="w-[380px] h-[450px] lg:w-[420px] lg:h-[500px] xl:w-[474px] xl:h-[568px] object-contain"
