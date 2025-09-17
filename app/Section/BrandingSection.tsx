@@ -10,38 +10,38 @@ const BrandingSection = () => {
       alt: "Image",
     },
     {
-      bgClasses: "w-[490px] h-[270px] top-[335px] left-[130px] rotate-[15.24deg]",
-      imgClasses: "w-[509px] h-[305px] top-[280px] left-[110px]",
+      bgClasses: "w-[340px] h-[245px] top-[316px] left-[190px] rotate-[15.24deg]",
+      imgClasses: "w-[420px] h-[245px] top-[280px] left-[110px]",
       src: "/Image/card2.png",
       alt: "Image",
     },
     {
       bgClasses:
-        "w-[344px] h-[231px] top-[500px] left-[-270px] rotate-[-15.27deg]",
-      imgClasses: "w-[366px] h-[246px] top-[510px] left-[-230px]",
+        "w-[334px] h-[221px] top-[430px] left-[-210px] rotate-[-15.27deg]",
+      imgClasses: "w-[346px] h-[226px] top-[430px] left-[-210px]",
       src: "/Image/card3.png",
       alt: "Image",
     },
   ];
 
   return (
-    <section className="w-full min-h-[800px] lg:min-h-[850px] xl:min-h-[995px] relative overflow-visible pb-8 lg:pb-10">
-      <div className="max-w-7xl mx-auto relative h-full">
+    <section className="w-full min-h-[700px] lg:min-h-[750px] xl:min-h-[850px] relative overflow-visible pb-8 lg:pb-10 -mt-8">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 xl:px-20 relative h-full">
         <div className="grid lg:grid-cols-2 items-center h-full">
           {/* Left side - Text content */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col">
             <img
-              className="w-[70px] h-[71px] -ml-8"
+              className="w-[40px] h-[42px] -ml-8"
               alt="Vector"
               src="/Icon/bg-vector.svg"
             />
             
-            <h1 className="font-display font-extrabold text-[#ffffff] text-[48px] lg:text-[56px] xl:text-[64px] tracking-[1.00px] leading-[44px] lg:leading-[52px] xl:leading-[60px]">
+            <h1 className="font-display font-extrabold text-[#ffffff] text-3xl lg:text-5xl xl:text-6xl leading-[40px] lg:leading-[50px] xl:leading-[60px]">
               STRATEGIC <br />
               DESIGN, TECH
             </h1>
 
-            <h2 className="font-display font-extrabold text-[#ffffff] text-[50px] lg:text-[58px] xl:text-[68px] tracking-[2.00px] leading-[46px] lg:leading-[54px] xl:leading-[64px]">
+            <h2 className="font-display font-extrabold text-[#ffffff] text-3xl lg:text-5xl xl:text-6xl leading-[46px] lg:leading-[54px] xl:leading-[64px]">
               EMOTIONAL <br />
               BRANDING
             </h2>
@@ -54,14 +54,14 @@ const BrandingSection = () => {
           </div>
 
           {/* Right side - Image cards */}
-          <div className="relative h-[500px] lg:h-[550px] xl:h-[600px] top-16 lg:top-20">
+          <div className="relative h-[400px] lg:h-[440px] xl:h-[480px] top-10 right-15 lg:top-14">
             {imageCards.map((card, index) => (
               <React.Fragment key={index}>
                 <div
-                  className={`absolute bg-[#0259DC] rounded-[30px] ${card.bgClasses}`}
+                  className={`absolute bg-[#0259DC] rounded-[38px] ${card.bgClasses}`}
                 />
                 <img
-                  className={`absolute rounded-[30px] border-2 border-solid border-[#ffd7c5] object-cover ${card.imgClasses}`}
+                  className={`absolute rounded-[35px] border-2 border-solid border-[#ffd7c5] object-cover ${card.imgClasses}`}
                   alt={card.alt}
                   src={card.src}
                 />
