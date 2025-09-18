@@ -7,6 +7,10 @@ import { TechnologyCard } from "./Card/Technology";
 import { DesignCard } from "./Card/Design";
 import { EmotionCard } from "./Card/Emotion";
 import { CoreValueSection } from "./Section/CoreValueSection";
+import { FaqSection } from "./Section/FaqSection";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import DiscoverySection from "./Section/DiscoverySection";
 
 const HomePage = () => {
   return (
@@ -92,6 +96,37 @@ const HomePage = () => {
       {/* Core Values Section */}
       <div>
         <CoreValueSection />
+
+        {/* FAQ Section */}
+        <div className="relative w-full px-4 sm:px-8 lg:px-20 xl:px-[105px] mb-16">
+          <div className="w-full max-w-[95vw] sm:max-w-[600px] lg:max-w-[900px] xl:max-w-[1100px] min-h-[350px] lg:min-h-[400px] xl:min-h-[420px] mx-auto bg-[#ffffff] rounded-[32px] lg:rounded-[40px] xl:rounded-[50px] border-4 border-solid border-black relative flex flex-col justify-between">
+            <img
+              className="absolute w-[56px] h-[56px] top-[-25px] left-[4px]"
+              alt="Frame"
+              src="/Image/Clip.png"
+            />
+
+            <div className="absolute left-1/2 transform -translate-x-1/2 [font-family:'Bricolage_Grotesque',Helvetica] font-bold text-black text-[54px] text-center tracking-[0] leading-[96.9px] whitespace-nowrap">
+              FAQs
+            </div>
+
+            <img
+              className="absolute w-[405px] h-[15px] top-[80px] left-1/2 transform -translate-x-1/2"
+              alt="Line"
+              src="/Image/blue-line.png"
+            />
+            <div className="mt-8 lg:mt-10 xl:mt-20">
+              <FaqSection />
+            </div>
+
+            {/* Decorative elements at the bottom */}
+            <div className="absolute w-[30px] h-[30px] left-260 lg:left-210 xl:left-250 top-110 lg:top-105 xl:top-110 rounded-[19.5px] border-4 border-solid border-black bg-blue-500" />
+            <div className="absolute w-[70px] h-[70px] left-260 lg:left-210 xl:left-255 top-50 lg:top-85 xl:top-90 rounded-[52px] border-4 border-solid border-black bg-blue-500" />
+            <div className="absolute w-5 h-5 left-270 lg:left-220 xl:left-260 top-80 lg:top-75 xl:top-80 rounded-[10px] border-4 border-solid border-black bg-blue-500" />
+          </div>
+        </div>
+        {/* Contact Form Section */}
+        <DiscoverySection />
       </div>
     </div>
   );
