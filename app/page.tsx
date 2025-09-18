@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import BrandingSection from "@/app/Section/BrandingSection";
 import { Button } from "@/components/ui/button";
@@ -8,19 +9,21 @@ import { DesignCard } from "./Card/Design";
 import { EmotionCard } from "./Card/Emotion";
 import { CoreValueSection } from "./Section/CoreValueSection";
 import { FaqSection } from "./Section/FaqSection";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import DiscoverySection from "./Section/DiscoverySection";
 import SubscribeSection from "./Section/SubscribeSection";
+import { FooterSection } from "./Section/FooterSection";
 
 const HomePage = () => {
   return (
     <div className="w-full min-h-screen bg-neutral-900">
       {/* header and navigation */}
-      <header className="relative z-50">
-        {/* navbar/ Navigation */}
-        <div className="flex w-full max-w-7xl mx-auto items-center justify-between py-6 px-20">
-          <div className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]">
+      <header className="fixed top-0 left-0 w-full z-50 bg-neutral-900 shadow-lg">
+        <nav className="flex w-full max-w-7xl mx-auto items-center justify-between py-6 px-20">
+          <div
+            className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto] cursor-pointer hover:opacity-80 transition-opacity duration-200"
+            onClick={() => window.location.href = '/'}
+            title="Go to Home"
+          >
             <img
               className="relative w-[20px] h-[20px] lg:w-[50px] lg:h-[45px]"
               alt="Vector"
@@ -32,12 +35,21 @@ const HomePage = () => {
           </div>
           <div className="inline-flex items-center justify-center gap-8 lg:gap-12 relative flex-[0_0_auto]">
             <div className="inline-flex items-start gap-[25px] lg:gap-[35px] relative flex-[0_0_auto]">
-              <div className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal]">
+              <span
+                className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal] px-2 py-1 rounded-md cursor-pointer hover:text-blue-500 transition-colors duration-200"
+                onClick={() => window.location.href = '/about'}
+              >
                 ABOUT
-              </div>
-              <div className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal]">
+              </span>
+              <span
+                className="relative w-fit mt-[-1.00px] font-semibold text-[#ffffff] text-[18px] lg:text-[20px] tracking-[0] leading-[normal] px-2 py-1 rounded-md cursor-pointer hover:text-blue-500 transition-colors duration-200"
+                onClick={() => {
+                  const faqSection = document.getElementById('faq-section');
+                  if (faqSection) faqSection.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 FAQ
-              </div>
+              </span>
             </div>
             {/* Button Component */}
             <Button className="flex w-[140px] lg:w-[150px] items-center gap-[8.12px] px-[12px] py-[4px] relative mt-[-1.50px] mb-[-1.50px] mr-[-1.50px] bg-blue-800 border-[3px] border-solid border-[#83aefa] shadow-[8px_8px_0px_#92cdfe] lg:shadow-[10px_10px_0px_#92cdfe] h-auto">
@@ -46,7 +58,7 @@ const HomePage = () => {
               </div>
             </Button>
           </div>
-        </div>
+        </nav>
       </header>
 
       {/* Main content */}
@@ -99,7 +111,7 @@ const HomePage = () => {
         <CoreValueSection />
 
         {/* FAQ Section */}
-        <div className="relative w-full px-4 sm:px-8 lg:px-20 xl:px-[105px] mb-16">
+        <div id="faq-section" className="relative w-full px-4 sm:px-8 lg:px-20 xl:px-[105px] mb-16">
           <div className="w-full max-w-[95vw] sm:max-w-[600px] lg:max-w-[900px] xl:max-w-[1100px] min-h-[350px] lg:min-h-[400px] xl:min-h-[420px] mx-auto bg-[#ffffff] rounded-[32px] lg:rounded-[40px] xl:rounded-[50px] border-4 border-solid border-black relative flex flex-col justify-between">
             <img
               className="absolute w-[56px] h-[56px] top-[-25px] left-[4px]"
@@ -130,6 +142,8 @@ const HomePage = () => {
         <DiscoverySection />
         {/* Subscribe Section */}
         <SubscribeSection />
+        {/* footer section */}
+        <FooterSection />
       </div>
     </div>
   );
