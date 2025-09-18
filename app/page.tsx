@@ -11,6 +11,7 @@ import { FaqSection } from "./Section/FaqSection";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import DiscoverySection from "./Section/DiscoverySection";
+import SubscribeSection from "./Section/SubscribeSection";
 
 const HomePage = () => {
   return (
@@ -127,6 +128,8 @@ const HomePage = () => {
         </div>
         {/* Contact Form Section */}
         <DiscoverySection />
+        {/* Subscribe Section */}
+        <SubscribeSection />
       </div>
     </div>
   );
