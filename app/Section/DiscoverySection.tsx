@@ -5,10 +5,10 @@ export default function DiscoverySection(): React.JSX.Element {
   return (
     <div className="relative w-full px-[105px] mb-16">
       <div className="text-center mb-8">
-        <div className="[font-family:'Bricolage_Grotesque',Helvetica] font-medium text-white text-[69.2px] text-center tracking-[0] leading-[normal] mb-4">
+        <div className="[font-family:'Bricolage_Grotesque',Helvetica] font-medium text-white text-[45px] text-center tracking-[0] leading-[normal] mb-4">
           Book a Discovery Call
         </div>
-        <div className="[font-family:'Bricolage_Grotesque',Helvetica] font-bold text-white text-[28px] text-center tracking-[0] leading-7">
+        <div className="[font-family:'Bricolage_Grotesque',Helvetica] font-bold text-white text-[20px] text-center tracking-[0] leading-7">
           Ready to transform your brand? Let's create something extraordinary
           together.
         </div>
@@ -47,7 +47,10 @@ export default function DiscoverySection(): React.JSX.Element {
         {/* Right side: Message textarea */}
         <div className="flex-1 max-w-xl">
           <div className="w-full h-[320px] border-[2px] border-solid border-[#ffffff] shadow-[5px_5px_0px_#ffffff]">
-                <Textarea className="w-full h-full bg-transparent border-none text-white resize-none placeholder-white placeholder:text-[1rem] placeholder:font-bold placeholder-opacity-100" placeholder="Message*" />
+            <Textarea
+              className="w-full h-full bg-transparent border-none text-white resize-none placeholder-white placeholder:text-[1rem] placeholder:font-bold placeholder-opacity-100"
+              placeholder="Message*"
+            />
           </div>
         </div>
       </div>
