@@ -25,7 +25,7 @@ const BrandingSection = () => {
   ];
 
   return (
-    <section className="w-full min-h-[700px] lg:min-h-[750px] xl:min-h-[850px] relative overflow-visible pb-8 lg:pb-10 -mt-8">
+    <section className="w-full min-h-[700px] lg:min-h-[750px] xl:min-h-[850px] relative overflow-visible pb-8 lg:pb-10 mt-12">
       <div className="max-w-7xl mx-auto px-4 lg:px-10 xl:px-20 relative h-full">
         <div className="grid lg:grid-cols-2 items-center h-full">
           {/* Left side - Text content */}
