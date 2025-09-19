@@ -1,0 +1,17 @@
+{
+  "name": "Crelivio",
+  "short_name": "Crelivio",
+  "description": "Strategic Design, Tech & Emotional Branding",
+  "icons": [
+    {
+      "src": "/Icon/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#0259DC",
+  "background_color": "#2c2c2c",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
