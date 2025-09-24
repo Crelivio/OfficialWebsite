@@ -24,28 +24,28 @@ export const FaqSection = (): React.ReactElement => {
   ];
 
   return (
-    <div className="w-full h-full px-4 sm:px-8 lg:px-12 xl:px-16 py-6 lg:py-10 flex flex-col justify-center">
+    <div className="w-full h-full pt-14 px-7 sm:px-4 lg:px-12 xl:px-16 py-3 sm:py-5 lg:py-10 flex flex-col justify-center">
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item, index) => (
-          <AccordionItem key={item.id} value={item.id} className="border-none">
-            <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>svg]:rotate-180">
-              <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 w-full">
-                <div className="[font-family:'Phonk-RegularDEMO',Helvetica] font-extrabold text-black text-[32px] sm:text-[40px] lg:text-[48px] xl:text-[50px] tracking-[0] leading-tight whitespace-nowrap">
+          <AccordionItem key={item.id} value={item.id} className={`border-none ${index === 1 ? 'mt-8 sm:mt-8 lg:mt-10' : ''}`}>
+            <AccordionTrigger className="hover:no-underline p-0 [&[data-state=open]>div>svg]:rotate-180 min-h-[48px] sm:min-h-[56px] lg:min-h-[72px]">
+              <div className="flex items-center gap-1 sm:gap-3 lg:gap-6 xl:gap-8 w-full">
+                <div className="[font-family:'Phonk-RegularDEMO',Helvetica] font-extrabold text-black text-[16px] sm:text-[22px] lg:text-[40px] xl:text-[50px] tracking-[0] leading-tight whitespace-nowrap">
                   {item.number}
                 </div>
-                <div className="flex-1 text-left [font-family:'Bricolage_Grotesque',Helvetica] font-medium text-black text-[22px] sm:text-[28px] lg:text-[36px] xl:text-[40px] tracking-[0] leading-tight">
+                <div className="flex-1 text-left [font-family:'Bricolage_Grotesque',Helvetica] font-medium text-black text-[13px] sm:text-[16px] lg:text-[28px] xl:text-[36px] tracking-[0] leading-tight">
                   {item.question}
                 </div>
-                <ChevronUpIcon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-14 lg:h-14 xl:w-[73px] xl:h-[73px] shrink-0 transition-transform duration-200" />
+                <ChevronUpIcon className="w-5 h-5 sm:w-7 sm:h-7 lg:w-12 lg:h-12 xl:w-[73px] xl:h-[73px] shrink-0 transition-transform duration-200" />
               </div>
             </AccordionTrigger>
             <AccordionContent className="pb-0">
-              <div className="pt-2 sm:pt-4 text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] text-black">
+              <div className="pt-1 sm:pt-2 lg:pt-4 text-[12px] sm:text-[13px] lg:text-[18px] xl:text-[20px] text-black leading-relaxed">
                 {item.content}
               </div>
             </AccordionContent>
             {index < faqItems.length - 1 && (
-              <div className="w-full h-[2px] lg:h-[3px] bg-black my-4 lg:my-8"></div>
+              <div className="w-full h-[1px] sm:h-[1.5px] lg:h-[3px] bg-black my-2 sm:my-3 lg:my-8"></div>
             )}
           </AccordionItem>
         ))}
