@@ -35,7 +35,7 @@ export const SubTitle: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-2 lg:px-8 xl:px-16">
         <header className="mb-8 lg:mb-10">
-          <h1 className="max-w-2xl font-display font-extrabold text-white text-3xl md:text-4xl lg:text-[48px] xl:text-[56px] tracking-[-2.00px] leading-tight lg:leading-[54px] xl:leading-[62px]">
+          <h1 className="max-w-2xl font-display font-extrabold text-white text-[20px] sm:text-[28px] md:text-[32px] lg:text-5xl xl:text-6xl tracking-[-2.00px] leading-tight lg:leading-[54px] xl:leading-[62px]">
             BRAND-FIRST.
             <br />
             PURPOSE-DRIVEN. INNOVATION-LED.
@@ -74,7 +74,7 @@ export const SubTitle: React.FC = () => {
 
               <div className="w-full lg:w-auto lg:flex-1 flex justify-center">
                 <img
-                  className="w-full max-w-[260px] lg:max-w-[320px] xl:max-w-[380px] h-auto object-contain"
+                  className="hidden lg:block w-full max-w-[260px] lg:max-w-[320px] xl:max-w-[380px] h-auto object-contain"
                   alt={item.imageAlt}
                   src={item.imageSrc}
                 />
