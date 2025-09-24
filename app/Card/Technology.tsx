@@ -3,9 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const TechnologyCard: React.FC = () => {
   return (
-    <Card className="w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[270px] bg-blue-500">
+  <Card className="w-full max-w-[200px] sm:max-w-[220px] lg:max-w-[270px]" style={{ backgroundColor: '#82affa' }}>
       <CardContent className="flex flex-wrap items-start gap-2 sm:gap-3 p-3 sm:p-4">
-        <div className="font-display font-medium text-[#2c2c2c] text-[16px] sm:text-[18px] lg:text-[22px] xl:text-[24px] tracking-[0] leading-[normal]">
+        <div className="font-display font-medium text-black text-[16px] sm:text-[18px] lg:text-[22px] xl:text-[24px] tracking-[0] leading-[normal]">
           Technology
         </div>
 
@@ -15,7 +15,7 @@ export const TechnologyCard: React.FC = () => {
           src="/Icon/technology-icon.svg"
         />
 
-        <p className="font-normal text-[#2c2c2c] text-[11px] sm:text-[12px] lg:text-base tracking-[0] leading-[normal]">
+  <p className="font-normal text-black text-[11px] sm:text-[12px] lg:text-base tracking-[0] leading-[normal]">
           Leveraging advanced technologies and tools to build scalable,
           efficient, and future-ready solutions that enhance performance and
           user engagement.
