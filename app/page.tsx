@@ -69,11 +69,13 @@ const HomePage = () => {
                 FAQ
               </span>
             </div>
-            <Button className="flex w-[110px] lg:w-[140px] items-center gap-2 px-4 py-2 bg-blue-800 border-2 lg:border-3 border-solid border-[#83aefa] shadow-[6px_6px_0px_#92cdfe] lg:shadow-[8px_8px_0px_#92cdfe] hover:shadow-[4px_4px_0px_#92cdfe] lg:hover:shadow-[6px_6px_0px_#92cdfe] transition-all duration-200 h-auto">
-              <div className="font-display font-semibold text-[#ffffff] text-[14px] lg:text-[18px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
-                Contact Us
-              </div>
-            </Button>
+            <a href="https://wa.me/message/XOGTHZA3ZIQHI1" target="_blank" rel="noopener noreferrer">
+              <Button className="flex w-[110px] lg:w-[140px] items-center gap-2 px-4 py-2 bg-blue-800 border-2 lg:border-3 border-solid border-[#83aefa] shadow-[6px_6px_0px_#92cdfe] lg:shadow-[8px_8px_0px_#92cdfe] hover:shadow-[4px_4px_0px_#92cdfe] lg:hover:shadow-[6px_6px_0px_#92cdfe] transition-all duration-200 h-auto">
+                <div className="font-display font-semibold text-[#ffffff] text-[14px] lg:text-[18px] text-center tracking-[0] leading-[normal] whitespace-nowrap">
+                  Contact Us
+                </div>
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Menu */}
@@ -110,11 +112,13 @@ const HomePage = () => {
                 FAQ
               </button>
               <div className="px-3 py-2">
-                <Button className="w-full bg-blue-800 border-2 border-solid border-[#83aefa] shadow-[4px_4px_0px_#92cdfe] hover:shadow-[2px_2px_0px_#92cdfe] transition-all duration-200">
-                  <div className="font-display font-semibold text-[#ffffff] text-[14px] text-center tracking-[0] leading-[normal]">
-                    Contact Us
-                  </div>
-                </Button>
+                <a href="https://wa.me/message/XOGTHZA3ZIQHI1" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full bg-blue-800 border-2 border-solid border-[#83aefa] shadow-[4px_4px_0px_#92cdfe] hover:shadow-[2px_2px_0px_#92cdfe] transition-all duration-200">
+                    <div className="font-display font-semibold text-[#ffffff] text-[14px] text-center tracking-[0] leading-[normal]">
+                      Contact Us
+                    </div>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -156,7 +160,7 @@ const HomePage = () => {
               </div>
             </div>
 
-            {/* Desktop Layout - Original with Join Line */}
+            {/* Desktop Layout */}
             <div className="hidden md:block">
               <div className="relative flex justify-center items-center min-h-[500px] lg:min-h-[700px]">
                 {/* Central join line and text */}
@@ -173,21 +177,21 @@ const HomePage = () => {
                   </div>
                 </div>
 
-                {/* Strategy Card - Top Left */}
+                {/* Strategy Card*/}
                 <div className="absolute top-[30px] lg:top-[40px] xl:top-[20px] left-[20px] lg:left-[60px] xl:left-[120px]">
                   <StrategyCard />
                 </div>
 
-                {/* Technology Card - Top Right */}
+                {/* Technology Card*/}
                 <div className="absolute top-[15px] lg:top-[20px] xl:top-[5px] right-[20px] lg:right-[60px] xl:right-[120px]">
                   <TechnologyCard />
                 </div>
-                {/* Design Card - Bottom Left */}
+                {/* Design Card */}
                 <div className="absolute bottom-[30px] lg:bottom-[40px] left-[20px] lg:left-[60px] xl:left-[120px]">
                   <DesignCard />
                 </div>
 
-                {/* Emotion Card - Bottom Right */}
+                {/* Emotion Card */}
                 <div className="absolute bottom-[15px] lg:bottom-[5px] right-[20px] lg:right-[60px] xl:right-[120px]">
                   <EmotionCard />
                 </div>
