@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const DesignCard = (): React.JSX.Element => {
@@ -9,10 +10,12 @@ export const DesignCard = (): React.JSX.Element => {
           <h2 className="font-display font-medium text-black text-[16px] sm:text-[18px] lg:text-[22px] xl:text-[24px] tracking-[0] leading-[normal]">
             Design
           </h2>
-          <img
+          <Image
             className="h-[24px] w-[24px] sm:h-[28px] sm:w-[28px] lg:h-[38px] lg:w-[38px] xl:h-[44px] xl:w-[44px] flex-shrink-0"
-            alt="Image"
+            alt="Design icon - Visual identity and UI/UX design"
             src="/Icon/design-icon.svg"
+            width={44}
+            height={44}
           />
         </div>
   <p className="font-normal text-black text-[11px] sm:text-[12px] lg:text-base tracking-[0] leading-[normal]">

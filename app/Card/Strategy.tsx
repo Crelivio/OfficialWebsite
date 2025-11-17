@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const StrategyCard = (): React.JSX.Element => {
@@ -9,10 +10,12 @@ export const StrategyCard = (): React.JSX.Element => {
           <h2 className="font-display font-medium text-black text-[16px] sm:text-[18px] lg:text-[22px] xl:text-[24px] tracking-[0] leading-[normal]">
             Strategy
           </h2>
-          <img
+          <Image
             className="h-[24px] w-[24px] sm:h-[28px] sm:w-[28px] lg:h-[38px] lg:w-[38px] xl:h-[44px] xl:w-[44px] ml-1 sm:ml-2 lg:ml-3 xl:ml-4"
-            alt="Image"
+            alt="Strategy icon - Brand strategy and planning"
             src="/Icon/strategy-icon.svg"
+            width={44}
+            height={44}
           />
         </div>
   <p className="font-normal text-black text-[11px] sm:text-[12px] lg:text-base tracking-[0] leading-[normal]">
