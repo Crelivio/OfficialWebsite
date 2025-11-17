@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
@@ -74,10 +75,12 @@ export const BrandSection: React.FC = () => {
 
         {/* Hero Image */}
         <div className="mb-8 sm:mb-10">
-          <img
+          <Image
             className="w-full max-w-7xl mx-auto h-auto object-cover rounded-lg"
             alt="Man image"
             src="/Image/hero.png"
+            width={1280}
+            height={720}
           />
         </div>
 
@@ -148,10 +151,12 @@ export const BrandSection: React.FC = () => {
 
         {/* Illustration image */}
         <div className="mt-15">
-          <img
+          <Image
             className="w-full max-w-7xl mx-auto h-auto object-cover"
             alt="Illustration"
             src="/Image/brand-illustration.png"
+            width={1280}
+            height={720}
           />
         </div>
 
