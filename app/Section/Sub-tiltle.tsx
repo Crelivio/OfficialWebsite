@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 const visionMissionData = [
@@ -27,10 +28,12 @@ const visionMissionData = [
 export const SubTitle: React.FC = () => {
   return (
     <section className="w-full px-6 relative pb-20">
-      <img
+      <Image
         className="absolute w-[140px] h-[140px] right-[130px] hidden lg:block"
         alt="Decorative group"
-        src="/Image/group.png"
+        src="/Image/Group.png"
+        width={140}
+        height={140}
       />
 
       <div className="max-w-7xl mx-auto px-2 lg:px-8 xl:px-16">
@@ -43,7 +46,7 @@ export const SubTitle: React.FC = () => {
         </header>
 
         <div className="space-y-8 lg:space-y-12">
-          {visionMissionData.map((item, index) => (
+          {visionMissionData.map((item) => (
             <div
               key={item.id}
               className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
@@ -62,10 +65,12 @@ export const SubTitle: React.FC = () => {
                     </p>
 
                     <div className="flex justify-end">
-                      <img
+                      <Image
                         className="w-[53px] h-[53px]"
                         alt="Card icon"
                         src={item.iconSrc}
+                        width={53}
+                        height={53}
                       />
                     </div>
                   </CardContent>
@@ -73,10 +78,12 @@ export const SubTitle: React.FC = () => {
               </div>
 
               <div className="w-full lg:w-auto lg:flex-1 flex justify-center">
-                <img
+                <Image
                   className="hidden lg:block w-full max-w-[260px] lg:max-w-[320px] xl:max-w-[380px] h-auto object-contain"
                   alt={item.imageAlt}
                   src={item.imageSrc}
+                  width={380}
+                  height={380}
                 />
               </div>
             </div>
