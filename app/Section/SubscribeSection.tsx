@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -9,10 +10,12 @@ const SubscribeSection = () => {
       <div className="block lg:hidden">
         <div className="flex flex-col items-center text-center space-y-4">
           <div className="flex items-center gap-3">
-            <img
+            <Image
               className="w-[35px] h-[35px] sm:w-[40px] sm:h-[40px]"
               alt="Mail"
               src="/Icon/mail.svg"
+              width={40}
+              height={40}
             />
             <div className="[font-family:'Clash_Display-Semibold',Helvetica] font-bold text-white text-[28px] sm:text-[36px] tracking-[0] leading-[normal]">
               Subscribe
@@ -48,10 +51,12 @@ const SubscribeSection = () => {
 
       {/* Desktop Layout */}
       <div className="hidden lg:block">
-        <img
+        <Image
           className="absolute w-[53px] h-[53px] top-[70px] left-[57px]"
           alt="Mail"
           src="/Icon/mail.svg"
+          width={53}
+          height={53}
         />
 
         <div className="absolute top-[70px] left-[120px] [font-family:'Clash_Display-Semibold',Helvetica] font-bold text-white text-[45.4px] text-center tracking-[0] leading-[normal]">

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const CoreValueSection: React.FC = () => {
@@ -40,10 +41,12 @@ export const CoreValueSection: React.FC = () => {
         {coreValuesData.map((value, index) => (
           <div key={index} className="relative flex flex-col items-center">
             <div className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[375px] aspect-square bg-[#2c2c2c] mb-4 sm:mb-6">
-              <img
+              <Image
                 className="w-full h-full object-cover"
                 alt={value.title}
                 src={value.image}
+                width={375}
+                height={375}
               />
             </div>
 
@@ -54,27 +57,33 @@ export const CoreValueSection: React.FC = () => {
                     <div className="font-medium text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-2xl tracking-[0] leading-[normal]">
                       {value.title}
                     </div>
-                    <img
+                    <Image
                       className="w-[25px] sm:w-[30px] lg:w-[35px] h-[15px] sm:h-[18px] lg:h-[20px]"
                       alt="Arrow"
                       src="/Icon/Arrow.svg"
+                      width={35}
+                      height={20}
                     />
                   </div>
 
-                  <img
+                  <Image
                     className="w-full h-px object-cover"
                     alt="Line"
                     src="/Image/Line.png"
+                    width={375}
+                    height={1}
                   />
 
                   <div className="[font-family:'Montserrat',Helvetica] font-medium text-white text-[12px] sm:text-[13px] lg:text-sm tracking-[0] leading-[20px] sm:leading-[22px] lg:leading-[25px]">
                     {value.description}
                   </div>
 
-                  <img
+                  <Image
                     className="w-full h-px object-cover"
                     alt="Line"
                     src="/Image/Line.png"
+                    width={375}
+                    height={1}
                   />
                 </div>
               </CardContent>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export const FooterSection = (): React.JSX.Element => {
   return (
@@ -14,7 +15,7 @@ export const FooterSection = (): React.JSX.Element => {
             rel="noopener noreferrer"
             className="hover:opacity-75 transition-opacity duration-200"
           >
-            <img className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Facebook" src="/Icon/facebook.svg" />
+            <Image className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Facebook" src="/Icon/facebook.svg" width={30} height={30} />
           </a>
           <a 
             href="https://twitter.com" 
@@ -22,7 +23,7 @@ export const FooterSection = (): React.JSX.Element => {
             rel="noopener noreferrer"
             className="hover:opacity-75 transition-opacity duration-200"
           >
-            <img className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Twitter" src="/Icon/twitter.svg" />
+            <Image className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Twitter" src="/Icon/twitter.svg" width={30} height={30} />
           </a>
           <a 
             href="https://instagram.com" 
@@ -30,7 +31,7 @@ export const FooterSection = (): React.JSX.Element => {
             rel="noopener noreferrer"
             className="hover:opacity-75 transition-opacity duration-200"
           >
-            <img className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Instagram" src="/Icon/instagram.svg" />
+            <Image className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px]" alt="Instagram" src="/Icon/instagram.svg" width={30} height={30} />
           </a>
         </div>
       </div>
