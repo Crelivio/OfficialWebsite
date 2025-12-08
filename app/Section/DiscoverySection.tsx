@@ -11,10 +11,53 @@ export default function DiscoverySection(): React.JSX.Element {
     company: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! We'll get back to you soon.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Failed to send message. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -90,13 +133,32 @@ export default function DiscoverySection(): React.JSX.Element {
           </div>
         </div>
       </div>
+      {/* Success/Error Message */}
+      {submitStatus.type && (
+        <div className="text-center mb-4">
+          <div
+            className={`inline-block px-6 py-3 rounded-md font-bold ${
+              submitStatus.type === "success"
+                ? "bg-green-500 text-white"
+                : "bg-red-500 text-white"
+            }`}
+          >
+            {submitStatus.message}
+          </div>
+        </div>
+      )}
       <div className="text-center">
-        <Button
-          type="submit"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-md shadow-lg transition-all duration-200"
-        >
-          Send Message
-        </Button>
+        <div className="inline-block">
+          <div className="border-[2px] sm:border-[3px] border-solid border-[#ffffff] shadow-[4px_4px_0px_#ffffff] sm:shadow-[6px_6px_0px_#ffffff] lg:shadow-[8px_8px_0px_#ffffff] hover:shadow-[6px_6px_0px_#ffffff] sm:hover:shadow-[8px_8px_0px_#ffffff] lg:hover:shadow-[10px_10px_0px_#ffffff] transition-all duration-200">
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-transparent hover:bg-white/10 text-white px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 text-[0.9rem] sm:text-[1rem] lg:text-[1.1rem] font-bold border-none shadow-none h-auto"
+            >
+              {isSubmitting ? "Sending..." : "Send Message"}
+            </Button>
+          </div>
+        </div>
       </div>
       </form>
     </div>
